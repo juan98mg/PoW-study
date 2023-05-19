@@ -1,0 +1,42 @@
+@import './../../assets/utils/colors.scss';
+
+.resize-border {
+  position: absolute;
+  height: 100%;
+  cursor: ew-resize;
+  width: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  &:hover {
+    cursor: ew-resize;
+    background-color: rgb(154, 208, 255);
+  }
+ 
+}
+
+.resize-border{
+    right: 0;
+}
+
+mwlResizable {
+  box-sizing: border-box; // required for the enableGhostResize option to work
+}
+
+
+.container{
+    background-color: $primary-with-gray;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.mat-tree {
+    background-color: transparent;
+    color: white;
+}
+
+.mat-tree-node{
+    color: inherit;
+}
+
