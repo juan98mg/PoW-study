@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PowComponent } from './pow.component';
+import { BlockchainComponent } from './blockchain.component';
 
 describe('PowComponent', () => {
-  let component: PowComponent;
-  let fixture: ComponentFixture<PowComponent>;
+  let component: BlockchainComponent;
+  let fixture: ComponentFixture<BlockchainComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PowComponent]
+      declarations: [BlockchainComponent]
     });
-    fixture = TestBed.createComponent(PowComponent);
+    fixture = TestBed.createComponent(BlockchainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PowComponent } from './pow.component';
+import { BlockchainComponent } from './blockchain.component';
 
-const routes: Routes = [{ path: '', component: PowComponent }];
+const routes: Routes = [{ path: '', component: BlockchainComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

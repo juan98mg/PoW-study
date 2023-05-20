@@ -15,7 +15,7 @@ export class TreeComponent {
     this.dataSource.data = TREE_DATA;
   }
 
-  private _transformer = (node: FoodNode, level: number) => {
+  private _transformer = (node: SkillNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
@@ -60,25 +60,25 @@ export class TreeComponent {
 }
 
 
-interface FoodNode {
+interface SkillNode {
   name: string;
-  children?: FoodNode[];
+  children?: SkillNode[];
 }
 
-const TREE_DATA: FoodNode[] = [
+const TREE_DATA: SkillNode[] = [
   {
-    name: 'Fruit',
-    children: [{name: 'Apple'}, {name: 'Banana'}, {name: 'Fruit loops'}],
+    name: 'JavaScript',
+    children: [{name: 'Angular'}, {name: 'React'}, {name: 'NestJS'}],
   },
   {
-    name: 'Vegetables',
+    name: 'Golang',
     children: [
       {
-        name: 'Green',
-        children: [{name: 'Broccoli'}, {name: 'Brussels sprouts'}],
+        name: 'Blockchain',
+        children: [{name: 'Conceptos Base'}, {name: 'PoW'}],
       },
       {
-        name: 'Orange',
+        name: 'REST API',
         children: [{name: 'Pumpkins'}, {name: 'Carrots'}],
       },
     ],

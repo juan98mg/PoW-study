@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { initializeApp } from 'src/services/assets/initializeIcons';
 import { IconLocalRegisterService } from 'src/services/assets/icon-local-register.service';
-import { PowModule } from './pow/pow.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarModule } from './navbar/navbar.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from 'src/state';
 import { TreeModule } from './tree/tree.module';
+import { BlockchainModule } from './blockchain/blockhain.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { TreeModule } from './tree/tree.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    PowModule,
+    BlockchainModule,
     HttpClientModule,
     NavbarModule,
     TreeModule,
