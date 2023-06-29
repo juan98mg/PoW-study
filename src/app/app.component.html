@@ -1,14 +1,12 @@
 <div [class]="classDistribution" class="experience-core">
-    <div class="experience-core__navbar">
-        <app-navbar></app-navbar>
-    </div>
+  <div class="experience-core__navbar">
+    <app-navbar></app-navbar>
+  </div>
 
-    <div *ngIf="hasOpenedMenu" class="animate__animated animate__backInLeft ">
-        <app-tree  />
-    </div>
-    <div class="experience-core__content">
-
-        <app-hasher ></app-hasher>
-    </div>
-
+  <div *ngIf="hasOpenedMenu" class="animate__animated animate__backInLeft">
+    <app-tree />
+  </div>
+  <div class="experience-core__content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

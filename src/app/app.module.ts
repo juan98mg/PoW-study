@@ -11,36 +11,36 @@ import { NavbarModule } from './navbar/navbar.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from 'src/state';
 import { TreeModule } from './tree/tree.module';
-import { BlockchainModule } from './blockchain/blockhain.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { WelcomComponent } from './components/welcom/welcom.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BlockchainModule,
     HttpClientModule,
     NavbarModule,
     TreeModule,
-    StoreModule.forRoot(reducers,{
-      metaReducers, 
+    StoreModule.forRoot(reducers, {
+      metaReducers,
       runtimeChecks: {
         strictActionImmutability: true,
         strictStateImmutability: true,
       },
-    })
+    }),
+    ComponentsModule,
   ],
   providers: [
     {
       provide: APP_INITIALIZER,
       useFactory: initializeApp,
       deps: [IconLocalRegisterService],
-      multi: true
-    }
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,44 +1,40 @@
-@import './../assets/utils/mixin.scss';
+@import "./../assets/utils/mixin.scss";
 
-.experience-core{
-    width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
-    display: grid;
+.experience-core {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  display: grid;
 
-    grid-template-areas: 
-        'navbar navbar navbar'
-        'content content content'
-        'content content content' 
-    ;
-    grid-template-rows: 64px 1fr;
-    grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "content content content"
+    "content content content";
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 1fr 4fr;
 
-    @include m('with-menu'){
-        grid-template-areas: 
-        'navbar navbar navbar'
-        'menu content content'
-        'menu content content' 
-        ;
-    }
+  @include m("with-menu") {
+    grid-template-areas:
+      "navbar navbar navbar"
+      "menu content content"
+      "menu content content";
+  }
 
-    @include e ('navbar'){
-        grid-area: navbar;
-    }
+  @include e("navbar") {
+    grid-area: navbar;
+  }
 
-    
-    @include e ('menu'){
-        grid-area: menu;
-    }
+  @include e("menu") {
+    grid-area: menu;
+  }
 
-    
-    @include e ('content'){
-        grid-area: content;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
+  @include e("content") {
+    grid-area: content;
+  }
+}
 
-
-
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
