@@ -1,0 +1,26 @@
+.container {
+  padding: 15px;
+  height: 100%;
+}
+
+.inner-content {
+  display: flex;
+  height: 95%;
+}
+
+.left-content {
+  flex-grow: 9;
+  background-color: #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow-y: auto;
+}
+
+.right-content {
+  flex-grow: 1;
+  background-color: #ddd;
+  flex-basis: 1%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  align-self: center;
+}

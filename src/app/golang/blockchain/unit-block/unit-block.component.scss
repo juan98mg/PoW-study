@@ -1,0 +1,18 @@
+.container {
+  background-color: #c2d1ff;
+  height: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.fab-container {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+@media (max-width: 600px) {
+  .fab-container {
+    bottom: 10px;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="item title" style="grid-column: 1 / span 2">
+    <h1>HASH</h1>
+  </div>
+  <div class="item" style="grid-row: 2">
+    <h2>¿Qué es?</h2>
+    <h3>Técnicamente</h3>
+    <span>
+      un hash (función hash o función resumen) es una función matemática que
+      toma un conjunto de datos de cualquier tamaño y lo transforma en un valor
+      de longitud fija. El resultado obtenido, conocido como el hash, es una
+      representación única y unívoca de los datos originales.
+    </span>
+    <h3>Coloquialmente</h3>
+    <span>
+      Transformación de datos cuya salida es un texto con un tamaño fijo en unos
+      caracteres especificos de cada función
+    </span>
+    <h3>Ejemplo</h3>
+    <img src="../../../../assets/img/eg-sha256.png" alt="Ejemplo hash sha256" />
+  </div>
+  <div class="item encode-content" style="grid-row: 2; grid-column: 2">
+    <mat-form-field class="full-width">
+      <mat-label>Texto a cifrar</mat-label>
+      <textarea
+        matInput
+        placeholder="Yo quiero comentarle un secreto al mundo"
+        rows="8"
+        [(ngModel)]="typedText"
+      ></textarea>
+    </mat-form-field>
+    <div class="encode-button">
+      <button mat-button color="primary" (click)="encode()">
+        <mat-icon matSuffix svgIcon="hasher"></mat-icon>
+        Cifrar
+      </button>
+    </div>
+  </div>
+</div>

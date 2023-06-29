@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="full-width id">
+    <mat-form-field class="full-width">
+      <mat-label>ID</mat-label>
+      <input matInput [(ngModel)]="id" type="number" />
+    </mat-form-field>
+  </div>
+  <div class="full-width nonce">
+    <mat-form-field class="full-width">
+      <mat-label>NONCE</mat-label>
+      <input matInput [(ngModel)]="nonce" type="number" />
+    </mat-form-field>
+  </div>
+  <div class="full-width content">
+    <mat-form-field class="full-width">
+      <mat-label>Texto a cifrar</mat-label>
+      <textarea
+        matInput
+        placeholder="Yo quiero comentarle un secreto al mundo"
+        rows="12"
+        [(ngModel)]="textToEncode"
+      ></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="full-width hash">
+    <mat-form-field class="full-width">
+      <mat-label>UNIÓN</mat-label>
+      <input matInput disabled [(ngModel)]="union" />
+    </mat-form-field>
+  </div>
+  <div class="full-width union">
+    <mat-form-field class="full-width">
+      <mat-label>HASH</mat-label>
+      <input matInput disabled [(ngModel)]="encodedText" />
+    </mat-form-field>
+  </div>
+  <div class="full-width button">
+    <button mat-button color="primary" (click)="mine()">
+      <mat-icon matSuffix svgIcon="hasher"></mat-icon>
+      Cifrar
+    </button>
+    <button mat-button color="primary" (click)="clean()">
+      <mat-icon matSuffix svgIcon="clean"></mat-icon>
+      Limpiar
+    </button>
+  </div>
+
+  <div class="fab-container" *ngIf="isMined">
+    <button
+      mat-icon-button
+      title="enviar a la blockchain"
+      [disabled]="sendBlockDisabled"
+      color="primary"
+    >
+      <mat-icon matSuffix svgIcon="check"></mat-icon>
+    </button>
+  </div>
+</div>

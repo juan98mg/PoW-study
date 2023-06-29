@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="inner-content">
+    <div class="left-content">
+      <div *ngIf="selectedComponent === 'hash'">
+        <app-hash></app-hash>
+      </div>
+      <div *ngIf="selectedComponent === 'bloque'">
+        <app-block></app-block>
+      </div>
+      <div *ngIf="selectedComponent === 'blockchain'">
+        <app-blockchain></app-blockchain>
+      </div>
+      <div *ngIf="selectedComponent === 'mineros'">
+        <app-mining></app-mining>
+      </div>
+      <div *ngIf="selectedComponent === 'moneda'">
+        <app-coin></app-coin>
+      </div>
+    </div>
+    <div class="right-content">
+      <div>
+        <app-button-concepts></app-button-concepts>
+      </div>
+    </div>
+  </div>
+</div>

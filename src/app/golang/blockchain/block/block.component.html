@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="item title" style="grid-column: 1 / span 2">
+    <h1>BLOQUE</h1>
+  </div>
+  <div class="item" style="grid-row: 2">
+    <h2>¿Qué es?</h2>
+    <h3>Técnicamente</h3>
+    <span>
+      un bloque en blockchain es una estructura de datos que contiene una
+      colección de transacciones. Es una unidad fundamental en la cadena de
+      bloques y se utiliza para almacenar y confirmar las transacciones
+      realizadas en la red.
+    </span>
+    <h3>Coloquialmente</h3>
+    <span> La memoria, tupla, unidad fundamental de almacenamiento </span>
+    <h2>Componentes</h2>
+
+    <span> <strong> Nonce: </strong> Número aleatorio</span>
+    <span> <strong> Data: </strong> Contenido</span>
+    <span> <strong> ID: </strong> identificativo del bloque</span>
+    <span> <strong> Hash: </strong> Transformación de la DATA</span>
+    <h3>Ejemplo</h3>
+    <div class="content-interact">
+      <div style="grid-column: 1; display: grid">
+        <img src="../../../../assets/img/block.png" alt="Ejemplo bloque" />
+        <span><strong>Velocidad:</strong> {{ velocity }}</span>
+        <mat-slider
+          min="0"
+          max="5"
+          step="0.5"
+          showTickMarks
+          discrete
+          [displayWith]="formatLabel"
+        >
+          <input [(ngModel)]="velocity" matSliderThumb />
+        </mat-slider>
+        <span><strong>Dificultad:</strong> {{ difficulty }} </span>
+        <mat-slider
+          min="0"
+          max="4"
+          step="1"
+          showTickMarks
+          discrete
+          color="warn"
+        >
+          <input [(ngModel)]="difficulty" value="4" matSliderThumb />
+        </mat-slider>
+      </div>
+      <div style="grid-column: 2">
+        <app-unit-block
+          [velocity]="velocity"
+          [difficulty]="difficulty"
+        ></app-unit-block>
+      </div>
+    </div>
+  </div>
+</div>
